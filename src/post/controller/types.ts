@@ -9,4 +9,8 @@ export interface PostsQuery {
   pageNumber: string;
 }
 
-export type PostsRequest = Request<object, object, object, PostsQuery>;
+export interface PostsBody {
+  postId: string;
+}
+
+export type PostsRequest = Request<PostsBody, object, object, PostsQuery>;
